@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bryant Risk Management &amp; Analytics | VetCert-Certified VOSB</title>
+<meta name="description" content="VetCert-Certified VOSB providing AML/CDD compliance operations, risk QC, and analytical support for prime contractors and federal programs. CAGE 0Q550. NAICS 541611. Tempe, AZ.">
+<meta name="keywords" content="VOSB, VetCert, AML investigations, KYC, KYB, CDD, EDD, QC, audit readiness, federal contracting, veteran owned small business, teaming, subcontracting, NAICS 541611, CAGE 0Q550, compliance QC">
+
+<!-- Open Graph -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://bryantanalytics.com">
+<meta property="og:title"       content="Bryant Risk Management &amp; Analytics | VetCert-Certified VOSB">
+<meta property="og:description" content="VetCert-Certified VOSB providing AML/CDD, compliance QC, and analytical support for prime contractors and federal programs. CAGE 0Q550.">
+<meta property="og:image"       content="https://bryantanalytics.com/og-preview.jpg">
+<meta property="og:site_name"   content="Bryant Risk Management &amp; Analytics">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Bryant Risk Management &amp; Analytics | VetCert-Certified VOSB">
+<meta name="twitter:description" content="VetCert-Certified VOSB providing AML/CDD, compliance QC, and analytical support for prime contractors and federal programs. CAGE 0Q550.">
+<meta name="twitter:image"       content="https://bryantanalytics.com/og-preview.jpg">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  "name": "Bryant Risk Management & Analytics",
+  "alternateName": "BRMA",
+  "description": "VetCert-Certified VOSB subcontractor and teaming partner for compliance operations, AML/CDD investigations, QC, and analytical support in regulated federal environments.",
+  "url": "https://bryantanalytics.com",
+  "email": "contact@bryantanalytics.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tempe",
+    "addressRegion": "AZ",
+    "addressCountry": "US"
+  },
+  "areaServed": "US",
+  "knowsAbout": ["AML compliance", "CDD operations", "KYC", "KYB", "EDD", "compliance QC", "audit readiness", "federal subcontracting", "VOSB teaming", "analytical support"],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "VetCert-Certified VOSB", "credentialCategory": "Federal Certification" },
+    { "@type": "EducationalOccupationalCredential", "name": "CAGE Code 0Q550", "credentialCategory": "Federal Registration" }
+  ],
+  "sameAs": ["https://www.linkedin.com/in/mikhaelbryant"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+
+<style>
+/* ── Custom Properties ──────────────────────────────── */
+:root {
+  --bg:            #0a0e17;
+  --surface:       #111827;
+  --surface-raised:#1a2332;
+  --accent:        #3b82f6;
+  --accent-hi:     #60a5fa;
+  --accent-gold:   #d4a843;
+  --text:          #e2e8f0;
+  --text-mid:      #94a3b8;
+  --text-dim:      #64748b;
+  --border:        rgba(255,255,255,0.06);
+  --success:       #22c55e;
+  --ff-display:    'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --ff-body:       'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --ff-mono:       'JetBrains Mono', 'DM Mono', monospace;
+  --max-w:         1200px;
+  --sec-pad:       120px;
+  --sec-pad-mob:   60px;
+}
+
+/* ── Reset ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--ff-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ── Layout ─────────────────────────────────────────── */
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+section { padding: var(--sec-pad) 0; }
+
+/* ── Nav ────────────────────────────────────────────── */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  transition: background 0.3s, box-shadow 0.3s;
+  padding: 0 24px;
+}
+#nav.scrolled {
+  background: var(--surface);
+  box-shadow: 0 1px 0 var(--border);
+}
+.nav-inner {
+  max-width: var(--max-w); margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px; gap: 24px;
+}
+.nav-brand {
+  font-weight: 700; font-size: 15px; letter-spacing: 0.01em;
+  white-space: nowrap; flex-shrink: 0;
+}
+.nav-brand span { color: var(--accent-gold); }
+.nav-links {
+  display: flex; gap: 28px; list-style: none;
+  font-size: 14px; font-weight: 500;
+}
+.nav-links a { color: var(--text-mid); transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-right { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.btn-nav {
+  background: var(--accent); color: #fff;
+  padding: 8px 16px; border-radius: 6px;
+  font-size: 13px; font-weight: 600;
+  white-space: nowrap; transition: background 0.2s;
+}
+.btn-nav:hover { background: var(--accent-hi); }
+
+/* Language switcher */
+.lang-wrap { display: flex; gap: 4px; }
+.lang-opt {
+  background: none; border: 1px solid var(--border);
+  color: var(--text-dim); font-size: 11px; font-weight: 600;
+  padding: 4px 7px; border-radius: 4px; cursor: pointer;
+  transition: all 0.15s; font-family: var(--ff-body);
+}
+.lang-opt:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+.lang-opt.active { color: var(--accent-gold); border-color: var(--accent-gold); }
+
+/* Hamburger */
+.nav-hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.nav-hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--text); border-radius: 2px; transition: all 0.3s;
+}
+.nav-mobile-menu {
+  display: none; position: fixed; inset: 0; z-index: 99;
+  background: var(--surface); flex-direction: column;
+  align-items: center; justify-content: center; gap: 32px;
+  font-size: 20px; font-weight: 600;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a { color: var(--text-mid); }
+.nav-mobile-menu .lang-wrap { margin-top: 8px; }
+.nav-mobile-close {
+  position: absolute; top: 20px; right: 24px;
+  background: none; border: none; color: var(--text); font-size: 28px; cursor: pointer;
+}
+
+/* ── Hero ───────────────────────────────────────────── */
+#hero {
+  min-height: 100vh; position: relative;
+  display: flex; align-items: center;
+  overflow: hidden;
+  padding: 80px 0 60px;
+}
+.hero-bg-gradient {
+  display: none;
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #0a0e17 0%, #0d1526 60%, #0a1020 100%);
+}
+.hero-globe-wrap {
+  position: absolute; right: -60px; top: 50%;
+  transform: translateY(-50%);
+  width: 600px; height: 600px; pointer-events: none;
+}
+#globeCanvas { width: 100%; height: 100%; }
+.hero-overlay {
+  position: absolute; right: -60px; top: 50%;
+  transform: translateY(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(ellipse at center, transparent 30%, var(--bg) 75%);
+  pointer-events: none;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 640px;
+}
+.hero-pills {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px;
+}
+.pill {
+  background: rgba(59,130,246,0.12);
+  border: 1px solid rgba(59,130,246,0.25);
+  color: var(--accent-hi);
+  font-size: 12px; font-weight: 600;
+  padding: 5px 12px; border-radius: 20px;
+  font-family: var(--ff-mono);
+  letter-spacing: 0.02em;
+}
+.pill.gold {
+  background: rgba(212,168,67,0.12);
+  border-color: rgba(212,168,67,0.3);
+  color: var(--accent-gold);
+}
+h1.hero-h1 {
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+h1.hero-h1 em { font-style: normal; color: var(--accent-gold); }
+.hero-sub {
+  font-size: 17px; color: var(--text-mid);
+  max-width: 540px; margin-bottom: 36px;
+  line-height: 1.7;
+}
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn-primary {
+  background: var(--accent-gold); color: #0a0e17;
+  padding: 13px 24px; border-radius: 8px;
+  font-weight: 700; font-size: 15px; cursor: pointer;
+  border: none; transition: opacity 0.2s; white-space: nowrap;
+  font-family: var(--ff-body);
+}
+.btn-primary:hover { opacity: 0.88; }
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--text); padding: 13px 24px; border-radius: 8px;
+  font-weight: 600; font-size: 15px; cursor: pointer;
+  transition: border-color 0.2s, color 0.2s; white-space: nowrap;
+  font-family: var(--ff-body);
+}
+.btn-secondary:hover { border-color: rgba(255,255,255,0.4); color: #fff; }
+
+/* ── Credential Strip ───────────────────────────────── */
+#cred-strip {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+}
+.cred-grid {
+  display: flex; flex-wrap: wrap; gap: 8px 32px;
+  align-items: center; justify-content: center;
+}
+.cred-item { display: flex; flex-direction: column; gap: 2px; }
+.cred-label {
+  font-size: 10px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+.cred-val {
+  font-family: var(--ff-mono); font-size: 13px;
+  font-weight: 600; color: var(--success);
+}
+.cred-val.mono-plain { color: var(--text); }
+.cred-divider {
+  width: 1px; height: 36px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ── Section Headings ───────────────────────────────── */
+.sec-eyebrow {
+  font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--accent-gold); margin-bottom: 14px;
+}
+h2.sec-title {
+  font-size: clamp(28px, 4vw, 34px);
+  font-weight: 600; letter-spacing: -0.01em;
+  line-height: 1.2; margin-bottom: 16px;
+}
+.sec-sub {
+  font-size: 17px; color: var(--text-mid);
+  max-width: 600px; line-height: 1.7;
+}
+
+/* ── Stats / Quantified Results ─────────────────────── */
+#stats { background: var(--surface); }
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px; margin-top: 52px;
+}
+.stat-card {
+  background: var(--surface-raised);
+  padding: 36px 28px; border-radius: 0;
+  position: relative;
+}
+.stat-card:first-child { border-radius: 12px 0 0 0; }
+.stat-card:nth-child(3) { border-radius: 0 12px 0 0; }
+.stat-card:nth-child(4) { border-radius: 0 0 0 12px; }
+.stat-card:last-child { border-radius: 0 0 12px 0; }
+.stat-number {
+  font-size: clamp(48px, 6vw, 68px);
+  font-weight: 700; color: var(--accent-gold);
+  line-height: 1; display: block; margin-bottom: 10px;
+  font-family: var(--ff-display);
+}
+.stat-label {
+  font-size: 14px; color: var(--text-mid);
+  line-height: 1.5;
+}
+
+/* ── Capabilities ───────────────────────────────────── */
+.cap-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 20px; margin-top: 52px;
+}
+.cap-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 28px 24px;
+  transition: border-color 0.2s;
+}
+.cap-card:hover { border-color: rgba(59,130,246,0.3); }
+.cap-icon {
+  width: 40px; height: 40px; margin-bottom: 18px;
+  color: var(--accent);
+}
+.cap-icon svg { width: 100%; height: 100%; }
+h3.cap-title { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+.cap-desc { font-size: 14px; color: var(--text-mid); line-height: 1.65; }
+
+/* ── Why BRMA ───────────────────────────────────────── */
+#why { background: var(--surface); }
+.why-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; margin-top: 52px;
+}
+.why-item {
+  background: var(--surface-raised);
+  padding: 32px 28px;
+}
+.why-item:first-child { border-radius: 12px 0 0 0; }
+.why-item:nth-child(3) { border-radius: 0 12px 0 0; }
+.why-num {
+  font-size: 11px; font-weight: 700;
+  font-family: var(--ff-mono); color: var(--accent-gold);
+  margin-bottom: 14px; display: block;
+}
+h3.why-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.why-desc { font-size: 14px; color: var(--text-mid); line-height: 1.6; }
+
+/* ── Engagement Models ──────────────────────────────── */
+.eng-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 20px; margin-top: 52px;
+}
+.eng-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 32px 28px;
+}
+.eng-num {
+  font-size: 11px; font-weight: 700; font-family: var(--ff-mono);
+  color: var(--accent); margin-bottom: 14px; display: block;
+}
+h3.eng-title { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+.eng-desc { font-size: 15px; color: var(--text-mid); line-height: 1.65; }
+
+/* ── Defense & Mission ──────────────────────────────── */
+#defense {
+  background: linear-gradient(135deg, #0a0e17 0%, #0c1220 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.defense-inner { max-width: 720px; }
+.defense-copy { font-size: 18px; color: var(--text-mid); line-height: 1.8; margin-top: 24px; }
+
+/* ── Contact ────────────────────────────────────────── */
+#contact { background: var(--surface); }
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 400px;
+  gap: 60px; margin-top: 48px;
+}
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+label {
+  display: flex; flex-direction: column; gap: 6px;
+  font-size: 13px; font-weight: 600;
+  color: var(--text-mid); letter-spacing: 0.02em;
+}
+input, select, textarea {
+  background: var(--surface-raised); border: 1px solid var(--border);
+  color: var(--text); border-radius: 8px; padding: 11px 14px;
+  font-family: var(--ff-body); font-size: 15px;
+  outline: none; transition: border-color 0.2s;
+  min-height: 44px;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+}
+textarea { resize: vertical; min-height: 120px; }
+select { cursor: pointer; }
+select option { background: var(--surface-raised); }
+.form-honeypot { display: none; }
+.btn-form {
+  background: var(--accent-gold); color: #0a0e17;
+  padding: 14px 28px; border-radius: 8px;
+  font-weight: 700; font-size: 16px; cursor: pointer;
+  border: none; font-family: var(--ff-body);
+  transition: opacity 0.2s; align-self: flex-start;
+}
+.btn-form:hover { opacity: 0.88; }
+.contact-info { display: flex; flex-direction: column; gap: 24px; }
+.contact-info-block { display: flex; flex-direction: column; gap: 10px; }
+.contact-info-title {
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--accent-gold); margin-bottom: 4px;
+}
+.contact-info-row {
+  display: flex; justify-content: space-between; gap: 16px;
+  font-size: 14px; padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.contact-info-row:last-child { border-bottom: none; }
+.ci-label { color: var(--text-dim); font-size: 12px; }
+.ci-val { color: var(--text); font-family: var(--ff-mono); font-size: 13px; }
+.ci-val.success { color: var(--success); }
+.contact-ctas { display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; }
+
+/* ── Footer ─────────────────────────────────────────── */
+footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+}
+.footer-inner {
+  display: flex; flex-wrap: wrap; gap: 24px;
+  align-items: center; justify-content: space-between;
+}
+.footer-brand { font-size: 14px; color: var(--text-mid); }
+.footer-brand strong { color: var(--text); display: block; margin-bottom: 4px; }
+.footer-meta { font-size: 13px; color: var(--text-dim); }
+.footer-links { display: flex; gap: 16px; align-items: center; }
+.footer-links a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+.footer-links a:hover { color: var(--text); }
+.footer-copy { font-size: 12px; color: var(--text-dim); width: 100%; }
+
+/* ── Fade-up Animations ─────────────────────────────── */
+.fade-up {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible { opacity: 1; transform: none; }
+
+/* ── Success Banner ─────────────────────────────────── */
+#form-success {
+  display: none; background: rgba(34,197,94,0.12);
+  border: 1px solid rgba(34,197,94,0.3);
+  color: var(--success); padding: 14px 18px; border-radius: 8px;
+  font-size: 14px; font-weight: 600;
+}
+
+/* ── RTL support ────────────────────────────────────── */
+html[dir="rtl"] .nav-inner { flex-direction: row-reverse; }
+html[dir="rtl"] .hero-content { margin-left: auto; margin-right: 0; }
+html[dir="rtl"] .hero-sub { margin-left: auto; }
+html[dir="rtl"] .contact-info-row { flex-direction: row-reverse; }
+html[dir="rtl"] .footer-inner { flex-direction: row-reverse; }
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .cap-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-info { order: -1; }
+}
+@media (max-width: 768px) {
+  :root { --sec-pad: var(--sec-pad-mob); }
+  .hero-globe-wrap, .hero-overlay { display: none; }
+  .hero-bg-gradient { display: block; }
+  #hero { min-height: 90vh; }
+  h1.hero-h1 { font-size: 32px; }
+  .hero-sub { font-size: 15px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-number { font-size: 48px; }
+  .stat-card:first-child { border-radius: 12px 0 0 0; }
+  .stat-card:nth-child(2) { border-radius: 0 12px 0 0; }
+  .stat-card:nth-child(3) { border-radius: 0; }
+  .stat-card:nth-child(5) { border-radius: 0 0 0 12px; }
+  .stat-card:last-child { border-radius: 0 0 12px 0; }
+  .cap-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .eng-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .nav-links, .nav-right { display: none; }
+  .nav-hamburger { display: flex; }
+  .footer-inner { flex-direction: column; gap: 16px; }
+  .cred-grid { justify-content: flex-start; gap: 6px 20px; }
+  .cred-divider { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">BRMA&nbsp;<span>·</span></div>
+    <ul class="nav-links">
+      <li><a href="#capabilities" data-i18n="nav_cap">Core Competencies</a></li>
+      <li><a href="#stats" data-i18n="nav_results">Results</a></li>
+      <li><a href="#why" data-i18n="nav_why">Why BRMA</a></li>
+      <li><a href="#engagement" data-i18n="nav_engage">Engage</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-wrap" id="lang-wrap-nav"></div>
+      <button class="btn-nav" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-i18n="nav_cta">Request Cap Statement</button>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="nav-mobile-menu" id="mobile-menu">
+  <button class="nav-mobile-close" id="mobile-close">&times;</button>
+  <a href="#capabilities" onclick="closeMobileMenu()" data-i18n="nav_cap">Core Competencies</a>
+  <a href="#stats" onclick="closeMobileMenu()" data-i18n="nav_results">Results</a>
+  <a href="#why" onclick="closeMobileMenu()" data-i18n="nav_why">Why BRMA</a>
+  <a href="#engagement" onclick="closeMobileMenu()" data-i18n="nav_engage">Engage</a>
+  <a href="#contact" onclick="closeMobileMenu()" data-i18n="nav_contact">Contact</a>
+  <div class="lang-wrap" id="lang-wrap-mobile"></div>
+</div>
+
+<!-- ── Hero ─────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-bg-gradient"></div>
+  <div class="hero-globe-wrap"><canvas id="globeCanvas"></canvas></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-pills">
+        <span class="pill gold" data-i18n="pill1">VetCert-Certified VOSB</span>
+        <span class="pill" data-i18n="pill2">CAGE 0Q550</span>
+        <span class="pill" data-i18n="pill3">UEI ZRFCFWUR97U9</span>
+        <span class="pill" data-i18n="pill4">SAM.gov Active</span>
+        <span class="pill" data-i18n="pill5">NAICS 541611</span>
+      </div>
+      <h1 class="hero-h1 fade-up" data-i18n="hero_h1">Veteran-owned compliance, risk management, and analytical support for federal programs.</h1>
+      <p class="hero-sub fade-up" data-i18n="hero_sub">BRMA supports prime contractors and federal teams with AML/CDD operations, audit-ready QC, investigations, and analytical support in regulated environments.</p>
+      <div class="hero-ctas fade-up">
+        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});setInquiry('Capability Statement Request')" data-i18n="hero_btn1">Request Capability Statement</button>
+        <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-i18n="hero_btn2">Discuss Teaming Support</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Credential Strip ──────────────────────────────── -->
+<div id="cred-strip">
+  <div class="container">
+    <div class="cred-grid">
+      <div class="cred-item">
+        <span class="cred-label" data-i18n="cred_cert_label">Certification</span>
+        <span class="cred-val" data-i18n="cred_cert_val">VetCert-Certified VOSB</span>
+      </div>
+      <div class="cred-divider"></div>
+      <div class="cred-item">
+        <span class="cred-label" data-i18n="cred_cage_label">CAGE Code</span>
+        <span class="cred-val mono-plain">0Q550</span>
+      </div>
+      <div class="cred-divider"></div>
+      <div class="cred-item">
+        <span class="cred-label">UEI</span>
+        <span class="cred-val mono-plain">ZRFCFWUR97U9</span>
+      </div>
+      <div class="cred-divider"></div>
+      <div class="cred-item">
+        <span class="cred-label" data-i18n="cred_naics_label">Primary NAICS</span>
+        <span class="cred-val mono-plain">541611</span>
+      </div>
+      <div class="cred-divider"></div>
+      <div class="cred-item">
+        <span class="cred-label" data-i18n="cred_sam_label">SAM Status</span>
+        <span class="cred-val" data-i18n="cred_sam_val">Active</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Quantified Results ────────────────────────────── -->
+<section id="stats">
+  <div class="container">
+    <p class="sec-eyebrow fade-up" data-i18n="stats_ey">Performance</p>
+    <h2 class="sec-title fade-up" data-i18n="stats_title">Quantified execution record.</h2>
+    <div class="stats-grid">
+      <div class="stat-card fade-up">
+        <span class="stat-number" data-count="95" data-suffix="%+">95%+</span>
+        <span class="stat-label" data-i18n="stat1_l">QC pass rate sustained across 6 years in large-scale regulated compliance work</span>
+      </div>
+      <div class="stat-card fade-up">
+        <span class="stat-number" data-count="500" data-suffix="+">500+</span>
+        <span class="stat-label" data-i18n="stat2_l">AML investigations completed in a high-volume payments environment</span>
+      </div>
+      <div class="stat-card fade-up">
+        <span class="stat-number" data-i18n="stat3_n">6 yrs</span>
+        <span class="stat-label" data-i18n="stat3_l">Compliance QC experience across KYC, CDD, CIP, beneficial ownership, and audit-readiness support</span>
+      </div>
+      <div class="stat-card fade-up">
+        <span class="stat-number" data-i18n="stat4_n">Multilingual</span>
+        <span class="stat-label" data-i18n="stat4_l">Capability available — English, Japanese, Mandarin, Russian, and Korean for cross-border review and coordination</span>
+      </div>
+      <div class="stat-card fade-up">
+        <span class="stat-number" data-count="2" data-suffix="">2</span>
+        <span class="stat-label" data-i18n="stat5_l">combat deployments (OIF/OEF) — experience built in high-accountability mission environments</span>
+      </div>
+      <div class="stat-card fade-up">
+        <span class="stat-number" data-i18n="stat6_n">Direct</span>
+        <span class="stat-label" data-i18n="stat6_l">Principal delivery — the person presenting the work is the person performing the work</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Capabilities ──────────────────────────────────── -->
+<section id="capabilities">
+  <div class="container">
+    <p class="sec-eyebrow fade-up" data-i18n="cap_ey">Core Competencies</p>
+    <h2 class="sec-title fade-up" data-i18n="cap_title">Specialized in regulated-environment work.</h2>
+    <p class="sec-sub fade-up" data-i18n="cap_sub">Controls-heavy, audit-sensitive delivery across AML/CDD operations, quality control, and analytical support.</p>
+    <div class="cap-grid">
+      <div class="cap-card fade-up">
+        <div class="cap-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="16" cy="10" r="5"/><path d="M6 28c0-5.523 4.477-10 10-10s10 4.477 10 10"/><path d="M22 14l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3 class="cap-title" data-i18n="c1h">KYC / KYB / CDD</h3>
+        <p class="cap-desc" data-i18n="c1p">Risk-based customer due diligence, beneficial ownership review, enhanced due diligence support, and onboarding-file quality review for regulated programs.</p>
+      </div>
+      <div class="cap-card fade-up">
+        <div class="cap-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 3L3 8v8c0 7 13 13 13 13s13-6 13-13V8L16 3z"/><path d="M11 16l3 3 7-7"/>
+          </svg>
+        </div>
+        <h3 class="cap-title" data-i18n="c2h">AML Investigations</h3>
+        <p class="cap-desc" data-i18n="c2p">Transaction-review support, pattern analysis, narrative development support, and documentation-heavy investigative work in AML-sensitive environments.</p>
+      </div>
+      <div class="cap-card fade-up">
+        <div class="cap-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="24" height="24" rx="3"/><path d="M10 16l4 4 8-8"/><path d="M10 10h12M10 22h6"/>
+          </svg>
+        </div>
+        <h3 class="cap-title" data-i18n="c3h">Compliance QC and Audit Readiness</h3>
+        <p class="cap-desc" data-i18n="c3p">QC support for onboarding, periodic review, and enhanced due diligence workflows, with documentation discipline built for audit and remediation contexts.</p>
+      </div>
+      <div class="cap-card fade-up">
+        <div class="cap-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 24l7-8 5 5 5-7 7 10"/><rect x="4" y="4" width="24" height="24" rx="2"/>
+          </svg>
+        </div>
+        <h3 class="cap-title" data-i18n="c4h">Analytical Support</h3>
+        <p class="cap-desc" data-i18n="c4p">Excel/VBA-based analysis, research-grade analytical methods, structured review support, and documentation-driven quantitative work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Why BRMA ──────────────────────────────────────── -->
+<section id="why">
+  <div class="container">
+    <p class="sec-eyebrow fade-up" data-i18n="why_ey">Differentiators</p>
+    <h2 class="sec-title fade-up" data-i18n="why_title">Why BRMA.</h2>
+    <div class="why-grid" style="margin-top:52px">
+      <div class="why-item fade-up">
+        <span class="why-num">01</span>
+        <h3 class="why-title" data-i18n="w1h">Regulated-environment fluency</h3>
+        <p class="why-desc" data-i18n="w1p">Built around compliance, quality control, documentation review, and analytical work where precision matters.</p>
+      </div>
+      <div class="why-item fade-up">
+        <span class="why-num">02</span>
+        <h3 class="why-title" data-i18n="w2h">Direct principal delivery</h3>
+        <p class="why-desc" data-i18n="w2p">No handoff between sales and execution. No bench-story mismatch.</p>
+      </div>
+      <div class="why-item fade-up" style="border-radius:0 12px 0 0">
+        <span class="why-num">03</span>
+        <h3 class="why-title" data-i18n="w3h">Quantified proof</h3>
+        <p class="why-desc" data-i18n="w3p">Performance is framed with results, not generic consulting language.</p>
+      </div>
+      <div class="why-item fade-up">
+        <span class="why-num">04</span>
+        <h3 class="why-title" data-i18n="w4h">Multilingual support</h3>
+        <p class="why-desc" data-i18n="w4p">Useful for cross-border document review, Asia-Pacific-facing coordination, and multilingual research contexts.</p>
+      </div>
+      <div class="why-item fade-up">
+        <span class="why-num">05</span>
+        <h3 class="why-title" data-i18n="w5h">VetCert-Certified VOSB</h3>
+        <p class="why-desc" data-i18n="w5p">Usable as a veteran-owned small-business partner in the VA context and as a credible teaming partner more broadly.</p>
+      </div>
+      <div class="why-item fade-up">
+        <span class="why-num">06</span>
+        <h3 class="why-title" data-i18n="w6h">Analytical rigor</h3>
+        <p class="why-desc" data-i18n="w6p">Not just process familiarity. BRMA can support documentation-heavy and analysis-heavy work at the same time.</p>
+      </div>
+      <div class="why-item fade-up" style="border-radius:0 0 12px 0;grid-column:1/-1;max-width:400px">
+        <span class="why-num">07</span>
+        <h3 class="why-title" data-i18n="w7h">Mission-environment discipline</h3>
+        <p class="why-desc" data-i18n="w7p">Built for high-accountability environments where documentation quality, timeliness, and reliability matter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Engagement Models ─────────────────────────────── -->
+<section id="engagement">
+  <div class="container">
+    <p class="sec-eyebrow fade-up" data-i18n="eng_ey">Ways to Engage</p>
+    <h2 class="sec-title fade-up" data-i18n="eng_title">How BRMA fits your procurement strategy.</h2>
+    <div class="eng-grid">
+      <div class="eng-card fade-up">
+        <span class="eng-num">01</span>
+        <h3 class="eng-title" data-i18n="e1h">Subcontract and Teaming Support</h3>
+        <p class="eng-desc" data-i18n="e1p">BRMA supports prime contractors that need credible VOSB participation plus real compliance, QC, and analytical capability. Capability statement available on request.</p>
+      </div>
+      <div class="eng-card fade-up">
+        <span class="eng-num">02</span>
+        <h3 class="eng-title" data-i18n="e2h">VA Opportunities and Federal Teaming</h3>
+        <p class="eng-desc" data-i18n="e2p">VetCert-Certified VOSB positioned for VA-relevant opportunities and for subcontract and teaming arrangements with federal partners.</p>
+      </div>
+      <div class="eng-card fade-up">
+        <span class="eng-num">03</span>
+        <h3 class="eng-title" data-i18n="e3h">Project-Based and Surge Support</h3>
+        <p class="eng-desc" data-i18n="e3p">Flexible support for compliance surge work, QC backfill, AML investigation capacity, and analytical projects.</p>
+      </div>
+      <div class="eng-card fade-up">
+        <span class="eng-num">04</span>
+        <h3 class="eng-title" data-i18n="e4h">Regulated-Environment Consulting Support</h3>
+        <p class="eng-desc" data-i18n="e4p">Support for compliance operations, QC framework refinement, audit-readiness work, and documentation-heavy remediation efforts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Defense & Mission ─────────────────────────────── -->
+<section id="defense">
+  <div class="container">
+    <div class="defense-inner">
+      <p class="sec-eyebrow fade-up" data-i18n="def_ey">Defense &amp; Mission</p>
+      <h2 class="sec-title fade-up" data-i18n="def_title">Built for high-accountability, mission-oriented environments.</h2>
+      <p class="defense-copy fade-up" data-i18n="def_copy">BRMA is led by a U.S. Air Force veteran with experience in documentation-heavy, quality-sensitive environments where precision, accountability, and follow-through matter. Those same standards carry into every engagement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ───────────────────────────────────────── -->
+<section id="contact">
+  <div class="container">
+    <p class="sec-eyebrow fade-up" data-i18n="contact_ey">Contact</p>
+    <h2 class="sec-title fade-up" data-i18n="contact_title">Need a VOSB partner for compliance, risk management, or analytical support?</h2>
+    <div class="contact-grid">
+      <form class="contact-form fade-up" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <label><span data-i18n="form_name">Name</span><input type="text" name="name" required autocomplete="name"></label>
+          <label><span data-i18n="form_org">Organization</span><input type="text" name="organization" autocomplete="organization"></label>
+        </div>
+        <label><span data-i18n="form_email">Email</span><input type="email" name="email" id="formEmail" required autocomplete="email"></label>
+        <label>
+          <span data-i18n="form_inquiry">Inquiry Type</span>
+          <select name="inquiry" id="inquirySelect">
+            <option value="" data-i18n="inquiry_default">Select…</option>
+            <option value="General Inquiry" data-i18n="inquiry_1">General Inquiry</option>
+            <option value="Teaming / Subcontracting" data-i18n="inquiry_2">Teaming / Subcontracting</option>
+            <option value="Capability Statement Request" data-i18n="inquiry_3">Capability Statement Request</option>
+            <option value="VA Opportunity" data-i18n="inquiry_4">VA Opportunity</option>
+            <option value="Surge / Project Support" data-i18n="inquiry_5">Surge / Project Support</option>
+            <option value="Other" data-i18n="inquiry_6">Other</option>
+          </select>
+        </label>
+        <label><span data-i18n="form_msg">Message</span><textarea name="message"></textarea></label>
+        <div class="form-honeypot"><input type="text" name="_hp" tabindex="-1" autocomplete="off"></div>
+        <div id="form-success" data-i18n="form_success">Thank you — we'll be in touch.</div>
+        <button type="submit" class="btn-form" data-i18n="form_submit">Send Message</button>
+      </form>
+
+      <div class="contact-info fade-up">
+        <div class="contact-ctas">
+          <button class="btn-primary" onclick="setInquiry('Capability Statement Request');document.getElementById('contactForm').scrollIntoView({behavior:'smooth'})" data-i18n="contact_btn1">Request Capability Statement</button>
+          <button class="btn-secondary" onclick="document.getElementById('contactForm').scrollIntoView({behavior:'smooth'})" data-i18n="contact_btn2">Contact BRMA</button>
+        </div>
+        <div class="contact-info-block">
+          <p class="contact-info-title" data-i18n="info_title">Business Information</p>
+          <div class="contact-info-row">
+            <span class="ci-label" data-i18n="info_email_label">Email</span>
+            <span class="ci-val">contact@bryantanalytics.com</span>
+          </div>
+          <div class="contact-info-row">
+            <span class="ci-label" data-i18n="info_loc_label">Location</span>
+            <span class="ci-val">Tempe, Arizona</span>
+          </div>
+          <div class="contact-info-row">
+            <span class="ci-label">CAGE</span>
+            <span class="ci-val">0Q550</span>
+          </div>
+          <div class="contact-info-row">
+            <span class="ci-label">UEI</span>
+            <span class="ci-val">ZRFCFWUR97U9</span>
+          </div>
+          <div class="contact-info-row">
+            <span class="ci-label">NAICS</span>
+            <span class="ci-val">541611</span>
+          </div>
+          <div class="contact-info-row">
+            <span class="ci-label" data-i18n="info_cert_label">VetCert-Certified VOSB</span>
+            <span class="ci-val success" data-i18n="info_cert_val">Active</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Bryant Risk Management &amp; Analytics</strong>
+        <span data-i18n="footer_meta">VetCert-Certified VOSB | CAGE 0Q550 | Tempe, Arizona</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mikhaelbryant" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+    </div>
+    <p class="footer-copy" style="margin-top:16px">&copy; 2026 Bryant Risk Management &amp; Analytics</p>
+  </div>
+</footer>
+
+<script>
+/* ── Scroll nav ──────────────────────────────────────── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* ── Hamburger ───────────────────────────────────────── */
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.add('open');
+});
+document.getElementById('mobile-close').addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.remove('open');
+});
+function closeMobileMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+}
+
+/* ── Fade-up observer ────────────────────────────────── */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+/* ── Count-up animation ──────────────────────────────── */
+const countObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || '';
+    if (!target) return;
+    const duration = 1400;
+    const start = performance.now();
+    function step(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(ease * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+    countObserver.unobserve(el);
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.stat-number[data-count]').forEach(el => countObserver.observe(el));
+
+/* ── Contact form ────────────────────────────────────── */
+function setInquiry(val) {
+  const sel = document.getElementById('inquirySelect');
+  if (sel) {
+    for (let i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value === val) { sel.selectedIndex = i; break; }
+    }
+  }
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  if (form._hp && form._hp.value) return; // honeypot
+  const data = new FormData(form);
+  const email = 'contact@bryantanalytics.com';
+  const subject = encodeURIComponent('[BRMA] ' + (data.get('inquiry') || 'Inquiry'));
+  const body = encodeURIComponent(
+    'Name: ' + (data.get('name') || '') + '\n' +
+    'Organization: ' + (data.get('organization') || '') + '\n' +
+    'Email: ' + (data.get('email') || '') + '\n' +
+    'Inquiry: ' + (data.get('inquiry') || '') + '\n\n' +
+    (data.get('message') || '')
+  );
+  window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
+  document.getElementById('form-success').style.display = 'block';
+  form.reset();
+}
+
+/* ── Globe (Three.js) ────────────────────────────────── */
+(function() {
+  if (window.innerWidth <= 768) return;
+
+  function initGlobe() {
+    const canvas = document.getElementById('globeCanvas');
+    if (!canvas || typeof THREE === 'undefined') return;
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setClearColor(0x000000, 0);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+    camera.position.z = 2.6;
+
+    function resize() {
+      const w = canvas.parentElement ? canvas.parentElement.offsetWidth : canvas.offsetWidth;
+      const h = canvas.parentElement ? canvas.parentElement.offsetHeight : canvas.offsetHeight;
+      if (!w || !h) return;
+      renderer.setSize(w, h);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    function makeDotTexture() {
+      const size = 1024;
+      const c = document.createElement('canvas');
+      c.width = c.height = size;
+      const ctx = c.getContext('2d');
+      const landPatches = [
+        {x:[60,120],  y:[180,280]},
+        {x:[130,200], y:[220,340]},
+        {x:[50,100],  y:[440,530]},
+        {x:[100,200], y:[440,600]},
+        {x:[50,180],  y:[530,800]},
+        {x:[160,220], y:[680,760]},
+      ];
+      ctx.fillStyle = 'rgba(59,130,246,0.9)';
+      const dotR = 2.2, gap = 9;
+      for (let py = 0; py < size; py += gap) {
+        for (let px = 0; px < size; px += gap) {
+          const inLand = landPatches.some(p =>
+            py >= p.x[0] && py <= p.x[1] && px >= p.y[0] && px <= p.y[1]
+          );
+          if (inLand) {
+            ctx.beginPath();
+            ctx.arc(px+(Math.random()-0.5)*3, py+(Math.random()-0.5)*3, dotR, 0, Math.PI*2);
+            ctx.fill();
+          }
+        }
+      }
+      return new THREE.CanvasTexture(c);
+    }
+
+    const sphere = new THREE.Mesh(
+      new THREE.SphereGeometry(1, 64, 64),
+      new THREE.MeshPhongMaterial({ map: makeDotTexture(), transparent: true, opacity: 0.92, shininess: 8 })
+    );
+    scene.add(sphere);
+
+    scene.add(new THREE.Mesh(
+      new THREE.SphereGeometry(1.003, 32, 32),
+      new THREE.MeshBasicMaterial({ color: 0x3b82f6, wireframe: true, transparent: true, opacity: 0.05 })
+    ));
+
+    scene.add(new THREE.Mesh(
+      new THREE.SphereGeometry(1.08, 64, 64),
+      new THREE.MeshBasicMaterial({ color: 0x1e40af, transparent: true, opacity: 0.07, side: THREE.BackSide })
+    ));
+
+    scene.add(new THREE.Mesh(
+      new THREE.SphereGeometry(1.15, 32, 32),
+      new THREE.MeshBasicMaterial({ color: 0x1e3a8a, transparent: true, opacity: 0.03, side: THREE.BackSide })
+    ));
+
+    function addRing(radius, tilt, opacity) {
+      const pts = [];
+      for (let i = 0; i <= 128; i++) {
+        const a = (i / 128) * Math.PI * 2;
+        pts.push(new THREE.Vector3(Math.cos(a)*radius, 0, Math.sin(a)*radius));
+      }
+      const line = new THREE.Line(
+        new THREE.BufferGeometry().setFromPoints(pts),
+        new THREE.LineBasicMaterial({ color: 0x60a5fa, transparent: true, opacity })
+      );
+      line.rotation.x = tilt;
+      scene.add(line);
+      return line;
+    }
+
+    const ring1 = addRing(1.35, Math.PI * 0.15, 0.22);
+    const ring2 = addRing(1.55, -Math.PI * 0.22, 0.13);
+
+    const orbitDot = new THREE.Mesh(
+      new THREE.SphereGeometry(0.022, 8, 8),
+      new THREE.MeshBasicMaterial({ color: 0xd4a843 })
+    );
+    scene.add(orbitDot);
+
+    scene.add(new THREE.AmbientLight(0xffffff, 0.3));
+    const dirLight = new THREE.DirectionalLight(0x60a5fa, 1.0);
+    dirLight.position.set(3, 2, 5);
+    scene.add(dirLight);
+    const fillLight = new THREE.DirectionalLight(0x1e3a8a, 0.4);
+    fillLight.position.set(-3, -1, -2);
+    scene.add(fillLight);
+
+    let mx = 0, my = 0;
+    document.addEventListener('mousemove', e => {
+      mx = (e.clientX / window.innerWidth  - 0.5) * 0.3;
+      my = (e.clientY / window.innerHeight - 0.5) * 0.2;
+    });
+
+    let t = 0;
+    function animate() {
+      requestAnimationFrame(animate);
+      t += 0.004;
+      sphere.rotation.y += 0.0015;
+      sphere.rotation.x += (my * 0.3 - sphere.rotation.x) * 0.04;
+      sphere.rotation.y += (mx * 0.3 - (sphere.rotation.y - t * 0.3)) * 0.04;
+      ring1.rotation.z =  t * 0.25;
+      ring2.rotation.z = -t * 0.18;
+      const orbitAngle = t * 0.8;
+      orbitDot.position.set(
+        Math.cos(orbitAngle) * 1.35,
+        Math.sin(orbitAngle * 0.6) * 0.3,
+        Math.sin(orbitAngle) * 1.35
+      );
+      renderer.render(scene, camera);
+    }
+    animate();
+  }
+
+  if (typeof THREE !== 'undefined') {
+    initGlobe();
+  } else {
+    // Wait for Three.js to load
+    const s = document.querySelector('script[src*="three"]');
+    if (s) s.addEventListener('load', initGlobe);
+  }
+})();
+
+/* ── I18N ────────────────────────────────────────────── */
+const T = {
+en:{
+  dir:'ltr', code:'EN', label:'EN',
+  nav_cap:'Core Competencies', nav_results:'Results', nav_why:'Why BRMA',
+  nav_engage:'Engage', nav_contact:'Contact', nav_cta:'Request Cap Statement',
+  pill1:'VetCert-Certified VOSB', pill2:'CAGE 0Q550', pill3:'UEI ZRFCFWUR97U9',
+  pill4:'SAM.gov Active', pill5:'NAICS 541611',
+  hero_h1:'Veteran-owned compliance, risk management, and analytical support for federal programs.',
+  hero_sub:'BRMA supports prime contractors and federal teams with AML/CDD operations, audit-ready QC, investigations, and analytical support in regulated environments.',
+  hero_btn1:'Request Capability Statement', hero_btn2:'Discuss Teaming Support',
+  cred_cert_label:'Certification', cred_cert_val:'VetCert-Certified VOSB',
+  cred_cage_label:'CAGE Code', cred_naics_label:'Primary NAICS',
+  cred_sam_label:'SAM Status', cred_sam_val:'Active',
+  stats_ey:'Performance', stats_title:'Quantified execution record.',
+  stat1_l:'QC pass rate sustained across 6 years in large-scale regulated compliance work',
+  stat2_l:'AML investigations completed in a high-volume payments environment',
+  stat3_n:'6 yrs', stat3_l:'Compliance QC experience across KYC, CDD, CIP, beneficial ownership, and audit-readiness support',
+  stat4_n:'Multilingual', stat4_l:'Capability available — English, Japanese, Mandarin, Russian, and Korean for cross-border review and coordination',
+  stat5_l:'combat deployments (OIF/OEF) — experience built in high-accountability mission environments',
+  stat6_n:'Direct', stat6_l:'Principal delivery — the person presenting the work is the person performing the work',
+  cap_ey:'Core Competencies', cap_title:'Specialized in regulated-environment work.',
+  cap_sub:'Controls-heavy, audit-sensitive delivery across AML/CDD operations, quality control, and analytical support.',
+  c1h:'KYC / KYB / CDD',
+  c1p:'Risk-based customer due diligence, beneficial ownership review, enhanced due diligence support, and onboarding-file quality review for regulated programs.',
+  c2h:'AML Investigations',
+  c2p:'Transaction-review support, pattern analysis, narrative development support, and documentation-heavy investigative work in AML-sensitive environments.',
+  c3h:'Compliance QC and Audit Readiness',
+  c3p:'QC support for onboarding, periodic review, and enhanced due diligence workflows, with documentation discipline built for audit and remediation contexts.',
+  c4h:'Analytical Support',
+  c4p:'Excel/VBA-based analysis, research-grade analytical methods, structured review support, and documentation-driven quantitative work.',
+  why_ey:'Differentiators', why_title:'Why BRMA.',
+  w1h:'Regulated-environment fluency', w1p:'Built around compliance, quality control, documentation review, and analytical work where precision matters.',
+  w2h:'Direct principal delivery', w2p:'No handoff between sales and execution. No bench-story mismatch.',
+  w3h:'Quantified proof', w3p:'Performance is framed with results, not generic consulting language.',
+  w4h:'Multilingual support', w4p:'Useful for cross-border document review, Asia-Pacific-facing coordination, and multilingual research contexts.',
+  w5h:'VetCert-Certified VOSB', w5p:'Usable as a veteran-owned small-business partner in the VA context and as a credible teaming partner more broadly.',
+  w6h:'Analytical rigor', w6p:'Not just process familiarity. BRMA can support documentation-heavy and analysis-heavy work at the same time.',
+  w7h:'Mission-environment discipline', w7p:'Built for high-accountability environments where documentation quality, timeliness, and reliability matter.',
+  eng_ey:'Ways to Engage', eng_title:'How BRMA fits your procurement strategy.',
+  e1h:'Subcontract and Teaming Support',
+  e1p:'BRMA supports prime contractors that need credible VOSB participation plus real compliance, QC, and analytical capability. Capability statement available on request.',
+  e2h:'VA Opportunities and Federal Teaming',
+  e2p:'VetCert-Certified VOSB positioned for VA-relevant opportunities and for subcontract and teaming arrangements with federal partners.',
+  e3h:'Project-Based and Surge Support',
+  e3p:'Flexible support for compliance surge work, QC backfill, AML investigation capacity, and analytical projects.',
+  e4h:'Regulated-Environment Consulting Support',
+  e4p:'Support for compliance operations, QC framework refinement, audit-readiness work, and documentation-heavy remediation efforts.',
+  def_ey:'Defense & Mission', def_title:'Built for high-accountability, mission-oriented environments.',
+  def_copy:'BRMA is led by a U.S. Air Force veteran with experience in documentation-heavy, quality-sensitive environments where precision, accountability, and follow-through matter. Those same standards carry into every engagement.',
+  contact_ey:'Contact', contact_title:'Need a VOSB partner for compliance, risk management, or analytical support?',
+  contact_btn1:'Request Capability Statement', contact_btn2:'Contact BRMA',
+  form_name:'Name', form_org:'Organization', form_email:'Email',
+  form_inquiry:'Inquiry Type', form_msg:'Message', form_submit:'Send Message',
+  form_success:'Thank you — we\'ll be in touch.',
+  inquiry_default:'Select…', inquiry_1:'General Inquiry', inquiry_2:'Teaming / Subcontracting',
+  inquiry_3:'Capability Statement Request', inquiry_4:'VA Opportunity',
+  inquiry_5:'Surge / Project Support', inquiry_6:'Other',
+  info_title:'Business Information', info_email_label:'Email',
+  info_loc_label:'Location', info_cert_label:'VetCert-Certified VOSB', info_cert_val:'Active',
+  footer_meta:'VetCert-Certified VOSB | CAGE 0Q550 | Tempe, Arizona',
+  nav_contact_label:'Contact',
+},
+ja:{
+  dir:'ltr', code:'JA', label:'JA',
+  nav_cap:'コンピテンシー', nav_results:'実績', nav_why:'なぜBRMAか',
+  nav_engage:'業務依頼', nav_contact:'お問い合わせ', nav_cta:'能力説明書を申請',
+  pill1:'VetCert認定VOSB', pill2:'CAGE 0Q550', pill3:'UEI ZRFCFWUR97U9',
+  pill4:'SAM.gov登録済', pill5:'NAICS 541611',
+  hero_h1:'退役軍人所有のコンプライアンス、リスク管理、分析支援。連邦プログラム向け。',
+  hero_sub:'BRMAはプライム請負業者および連邦チームに対し、AML/CDD業務、監査対応QC、調査、規制環境における分析支援を提供します。',
+  hero_btn1:'能力説明書を申請', hero_btn2:'チーミング支援を相談',
+  cred_cert_label:'認定', cred_cert_val:'VetCert認定VOSB',
+  cred_cage_label:'CAGEコード', cred_naics_label:'主要NAICS',
+  cred_sam_label:'SAMステータス', cred_sam_val:'登録済・有効',
+  stats_ey:'実績', stats_title:'定量化された実行記録。',
+  stat1_l:'大規模規制コンプライアンス業務における6年間のQC合格率',
+  stat2_l:'大量取引決済環境で完了したAML調査件数',
+  stat3_n:'6年', stat3_l:'KYC、CDD、CIP、実質的支配者確認、監査対応支援にわたるコンプライアンスQC経験',
+  stat4_n:'多言語', stat4_l:'対応言語あり — 英語、日本語、中国語、ロシア語、韓国語による国際的レビューと調整',
+  stat5_l:'実戦展開回数（OIF/OEF）— 高い説明責任が求められるミッション環境で培った経験',
+  stat6_n:'直接', stat6_l:'プリンシパル納品 — 提案者と実行者が同一人物',
+  cap_ey:'コア・コンピテンシー', cap_title:'規制環境業務に特化。',
+  cap_sub:'AML/CDD業務、品質管理、分析支援にわたる統制重視・監査対応型の成果物提供。',
+  c1h:'KYC / KYB / CDD',
+  c1p:'リスクベースの顧客デューデリジェンス、実質的支配者レビュー、拡大デューデリジェンス支援、規制プログラム向けのオンボーディングファイル品質レビュー。',
+  c2h:'AML調査',
+  c2p:'取引レビュー支援、パターン分析、ナラティブ作成支援、AML敏感環境における文書集約型調査業務。',
+  c3h:'コンプライアンスQCおよび監査対応',
+  c3p:'オンボーディング、定期レビュー、拡大デューデリジェンスワークフローのQC支援。監査・是正対応に特化した文書規律。',
+  c4h:'分析支援',
+  c4p:'Excel/VBAベースの分析、研究グレードの分析手法、構造化レビュー支援、文書主導の定量業務。',
+  why_ey:'差別化要素', why_title:'なぜBRMAか。',
+  w1h:'規制環境への精通', w1p:'コンプライアンス、品質管理、文書レビュー、精度が求められる分析業務を中心に構築。',
+  w2h:'直接プリンシパル納品', w2p:'営業と実行の間に引き継ぎなし。ベンチストーリーの不一致なし。',
+  w3h:'定量化された実績', w3p:'業績は一般的なコンサルティング言語ではなく、結果で示されます。',
+  w4h:'多言語対応', w4p:'国境を越えた文書レビュー、アジア太平洋向け調整、多言語調査コンテキストに有用。',
+  w5h:'VetCert認定VOSB', w5p:'VAの文脈での退役軍人所有中小企業パートナーとして、また広くチーミングパートナーとして活用可能。',
+  w6h:'分析的厳密さ', w6p:'プロセスへの精通だけでなく、文書集約型と分析集約型の業務を同時にサポート可能。',
+  w7h:'ミッション環境の規律', w7p:'文書品質、適時性、信頼性が重要な高説明責任環境のために構築。',
+  eng_ey:'業務依頼方法', eng_title:'BRMAがあなたの調達戦略に適合する方法。',
+  e1h:'下請け・チーミング支援',
+  e1p:'BRMAは、信頼性のあるVOSB参加と真のコンプライアンス・QC・分析能力を必要とするプライム請負業者を支援します。能力説明書はリクエストに応じて提供。',
+  e2h:'VA案件および連邦チーミング',
+  e2p:'VetCert認定VOSBとして、VA関連案件および連邦パートナーとの下請け・チーミング契約に対応。',
+  e3h:'プロジェクト型・サージ支援',
+  e3p:'コンプライアンスサージ業務、QCバックフィル、AML調査キャパシティ、分析プロジェクトへの柔軟な支援。',
+  e4h:'規制環境コンサルティング支援',
+  e4p:'コンプライアンス業務、QCフレームワーク改善、監査対応、文書集約型是正業務への支援。',
+  def_ey:'防衛・ミッション', def_title:'高い説明責任が求められるミッション指向の環境に対応。',
+  def_copy:'BRMAは米空軍退役軍人が率いており、精度・説明責任・徹底した遂行が求められる文書集約型・品質重視の環境での経験を持ちます。その基準はすべてのエンゲージメントに持ち込まれます。',
+  contact_ey:'お問い合わせ', contact_title:'コンプライアンス、リスク管理、または分析支援のVOSBパートナーが必要ですか？',
+  contact_btn1:'能力説明書を申請', contact_btn2:'BRMAに問い合わせる',
+  form_name:'お名前', form_org:'組織名', form_email:'メールアドレス',
+  form_inquiry:'お問い合わせ種別', form_msg:'メッセージ', form_submit:'送信',
+  form_success:'ありがとうございます。追ってご連絡いたします。',
+  inquiry_default:'選択してください', inquiry_1:'一般的なお問い合わせ', inquiry_2:'チーミング・下請け',
+  inquiry_3:'能力説明書の申請', inquiry_4:'VA案件', inquiry_5:'サージ・プロジェクト支援', inquiry_6:'その他',
+  info_title:'会社情報', info_email_label:'メール',
+  info_loc_label:'所在地', info_cert_label:'VetCert-Certified VOSB', info_cert_val:'登録済・有効',
+  footer_meta:'VetCert認定VOSB | CAGE 0Q550 | テンピ、アリゾナ州',
+},
+ko:{
+  dir:'ltr', code:'KO', label:'KO',
+  nav_cap:'핵심 역량', nav_results:'실적', nav_why:'BRMA 선택 이유',
+  nav_engage:'업무 문의', nav_contact:'연락처', nav_cta:'역량 설명서 요청',
+  pill1:'VetCert 인증 VOSB', pill2:'CAGE 0Q550', pill3:'UEI ZRFCFWUR97U9',
+  pill4:'SAM.gov 등록', pill5:'NAICS 541611',
+  hero_h1:'연방 프로그램을 위한 재향군인 소유의 컴플라이언스, 리스크 관리 및 분석 지원.',
+  hero_sub:'BRMA는 주요 계약업체와 연방 팀에 AML/CDD 운영, 감사 준비 QC, 조사, 규제 환경 분석 지원을 제공합니다.',
+  hero_btn1:'역량 설명서 요청', hero_btn2:'팀잉 지원 논의',
+  cred_cert_label:'인증', cred_cert_val:'VetCert 인증 VOSB',
+  cred_cage_label:'CAGE 코드', cred_naics_label:'주요 NAICS',
+  cred_sam_label:'SAM 상태', cred_sam_val:'유효',
+  stats_ey:'실적', stats_title:'정량화된 실행 기록.',
+  stat1_l:'대규모 규제 컴플라이언스 업무 6년간 유지된 QC 합격률',
+  stat2_l:'대용량 결제 환경에서 완료된 AML 조사 건수',
+  stat3_n:'6년', stat3_l:'KYC, CDD, CIP, 실소유주 확인, 감사 준비 지원에 걸친 컴플라이언스 QC 경험',
+  stat4_n:'다국어', stat4_l:'다국어 역량 이용 가능 — 영어, 일본어, 중국어, 러시아어, 한국어 지원',
+  stat5_l:'전투 파견 횟수(OIF/OEF) — 높은 책임감이 요구되는 임무 환경에서 쌓은 경험',
+  stat6_n:'직접', stat6_l:'주체 납품 — 제안하는 사람이 곧 실행하는 사람',
+  cap_ey:'핵심 역량', cap_title:'규제 환경 업무 전문.',
+  cap_sub:'AML/CDD 운영, 품질 관리, 분석 지원 전반에 걸친 통제 중심·감사 대응형 납품.',
+  c1h:'KYC / KYB / CDD',
+  c1p:'리스크 기반 고객 실사, 실소유주 검토, 강화된 실사 지원, 규제 프로그램용 온보딩 파일 품질 검토.',
+  c2h:'AML 조사',
+  c2p:'거래 검토 지원, 패턴 분석, 서술 작성 지원, AML 민감 환경에서의 문서 집약적 조사 업무.',
+  c3h:'컴플라이언스 QC 및 감사 준비',
+  c3p:'온보딩, 정기 검토, 강화된 실사 워크플로우의 QC 지원. 감사 및 시정 맥락에 맞춘 문서 규율.',
+  c4h:'분석 지원',
+  c4p:'Excel/VBA 기반 분석, 연구급 분석 방법, 구조화된 검토 지원, 문서 중심 정량 업무.',
+  why_ey:'차별화 요소', why_title:'왜 BRMA인가.',
+  w1h:'규제 환경 전문성', w1p:'정밀도가 중요한 컴플라이언스, 품질 관리, 문서 검토, 분석 업무를 중심으로 구축.',
+  w2h:'직접 주체 납품', w2p:'영업과 실행 사이의 인계 없음. 벤치 스토리 불일치 없음.',
+  w3h:'정량화된 증거', w3p:'성과는 일반적인 컨설팅 언어가 아닌 결과로 제시됩니다.',
+  w4h:'다국어 지원', w4p:'국경 간 문서 검토, 아시아태평양 방면 조정, 다국어 조사 맥락에 유용.',
+  w5h:'VetCert 인증 VOSB', w5p:'VA 맥락에서 재향군인 소유 중소기업 파트너로, 그리고 보다 광범위하게 신뢰할 수 있는 팀잉 파트너로 활용 가능.',
+  w6h:'분석적 엄밀성', w6p:'프로세스 숙지에 그치지 않고 문서 집약적, 분석 집약적 업무를 동시에 지원 가능.',
+  w7h:'임무 환경 규율', w7p:'문서 품질, 적시성, 신뢰성이 중요한 고책임 환경을 위해 구축.',
+  eng_ey:'업무 문의 방법', eng_title:'BRMA가 귀하의 조달 전략에 적합한 방법.',
+  e1h:'하도급 및 팀잉 지원',
+  e1p:'BRMA는 신뢰할 수 있는 VOSB 참여와 실질적인 컴플라이언스·QC·분석 역량을 필요로 하는 주요 계약업체를 지원합니다. 역량 설명서는 요청 시 제공.',
+  e2h:'VA 기회 및 연방 팀잉',
+  e2p:'VetCert 인증 VOSB로서 VA 관련 기회 및 연방 파트너와의 하도급·팀잉 계약에 대응.',
+  e3h:'프로젝트 기반 및 서지 지원',
+  e3p:'컴플라이언스 서지 업무, QC 백필, AML 조사 용량, 분석 프로젝트에 대한 유연한 지원.',
+  e4h:'규제 환경 컨설팅 지원',
+  e4p:'컴플라이언스 운영, QC 프레임워크 개선, 감사 준비 작업, 문서 집약적 시정 노력 지원.',
+  def_ey:'방위 및 임무', def_title:'높은 책임감이 요구되는 임무 지향적 환경에 대응.',
+  def_copy:'BRMA는 정밀도, 책임감, 철저한 수행이 요구되는 문서 집약적·품질 중심 환경에서의 경험을 보유한 미국 공군 퇴역 군인이 이끌고 있습니다. 그 기준은 모든 업무에 적용됩니다.',
+  contact_ey:'연락처', contact_title:'컴플라이언스, 리스크 관리 또는 분석 지원을 위한 VOSB 파트너가 필요하신가요?',
+  contact_btn1:'역량 설명서 요청', contact_btn2:'BRMA에 문의',
+  form_name:'성명', form_org:'조직명', form_email:'이메일',
+  form_inquiry:'문의 유형', form_msg:'메시지', form_submit:'메시지 보내기',
+  form_success:'감사합니다 — 곧 연락드리겠습니다.',
+  inquiry_default:'선택…', inquiry_1:'일반 문의', inquiry_2:'팀잉 / 하도급',
+  inquiry_3:'역량 설명서 요청', inquiry_4:'VA 기회', inquiry_5:'서지 / 프로젝트 지원', inquiry_6:'기타',
+  info_title:'회사 정보', info_email_label:'이메일',
+  info_loc_label:'위치', info_cert_label:'VetCert-Certified VOSB', info_cert_val:'유효',
+  footer_meta:'VetCert 인증 VOSB | CAGE 0Q550 | 템피, 애리조나',
+},
+zh:{
+  dir:'ltr', code:'ZH', label:'ZH',
+  nav_cap:'核心能力', nav_results:'業績', nav_why:'為何選擇BRMA',
+  nav_engage:'業務洽詢', nav_contact:'聯絡我們', nav_cta:'申請能力說明書',
+  pill1:'VetCert認證VOSB', pill2:'CAGE 0Q550', pill3:'UEI ZRFCFWUR97U9',
+  pill4:'SAM.gov已登記', pill5:'NAICS 541611',
+  hero_h1:'退伍軍人所有企業提供的合規、風險管理與分析支援，面向聯邦計畫。',
+  hero_sub:'BRMA為主承包商及聯邦團隊提供AML/CDD作業、審計就緒QC、調查及法規環境分析支援。',
+  hero_btn1:'申請能力說明書', hero_btn2:'洽談組隊支援',
+  cred_cert_label:'認證', cred_cert_val:'VetCert認證VOSB',
+  cred_cage_label:'CAGE代碼', cred_naics_label:'主要NAICS',
+  cred_sam_label:'SAM狀態', cred_sam_val:'有效',
+  stats_ey:'業績', stats_title:'量化執行記錄。',
+  stat1_l:'在大規模法規合規工作中持續6年的QC通過率',
+  stat2_l:'在高交易量支付環境中完成的AML調查案件數',
+  stat3_n:'6年', stat3_l:'涵蓋KYC、CDD、CIP、實質受益人確認及審計就緒支援的合規QC經驗',
+  stat4_n:'多語言', stat4_l:'多語言能力可用 — 英語、日語、普通話、俄語及韓語，支援跨境審查與協調',
+  stat5_l:'實戰部署次數（OIF/OEF）— 在高責任使命環境中建立的經驗',
+  stat6_n:'直接', stat6_l:'主體交付 — 提案者即執行者',
+  cap_ey:'核心能力', cap_title:'專精於法規環境工作。',
+  cap_sub:'涵蓋AML/CDD作業、品質控制及分析支援的管控密集型、審計敏感型交付。',
+  c1h:'KYC / KYB / CDD',
+  c1p:'基於風險的客戶盡職調查、實質受益人審查、強化盡職調查支援，以及法規計畫的入職文件品質審查。',
+  c2h:'AML調查',
+  c2p:'交易審查支援、模式分析、敘述撰寫支援，以及AML敏感環境中的文件密集型調查工作。',
+  c3h:'合規QC與審計就緒',
+  c3p:'入職、定期審查及強化盡職調查工作流程的QC支援，具備為審計與整改情境設計的文件規範。',
+  c4h:'分析支援',
+  c4p:'Excel/VBA分析、研究級分析方法、結構化審查支援及文件驅動的定量工作。',
+  why_ey:'差異化要素', why_title:'為何選擇BRMA。',
+  w1h:'法規環境精通', w1p:'圍繞合規、品質控制、文件審查及精準度至關重要的分析工作而建立。',
+  w2h:'主體直接交付', w2p:'銷售與執行之間無交接。無替身敘述不符問題。',
+  w3h:'量化證明', w3p:'業績以結果呈現，而非通用顧問語言。',
+  w4h:'多語言支援', w4p:'適用於跨境文件審查、亞太面向協調及多語言研究情境。',
+  w5h:'VetCert認證VOSB', w5p:'可作為VA情境下的退伍軍人所有小型企業合作夥伴，以及更廣泛的可信組隊夥伴。',
+  w6h:'分析嚴謹性', w6p:'不僅是流程熟悉度。BRMA能同時支援文件密集型與分析密集型工作。',
+  w7h:'使命環境紀律', w7p:'為文件品質、時效性及可靠性至關重要的高責任環境而建立。',
+  eng_ey:'業務洽詢方式', eng_title:'BRMA如何配合您的採購策略。',
+  e1h:'分包與組隊支援',
+  e1p:'BRMA支援需要可信VOSB參與加上真正合規、QC及分析能力的主承包商。能力說明書可應要求提供。',
+  e2h:'VA機會與聯邦組隊',
+  e2p:'VetCert認證VOSB，定位於VA相關機會及與聯邦夥伴的分包與組隊安排。',
+  e3h:'專案型與緊急支援',
+  e3p:'針對合規緊急工作、QC補充、AML調查容量及分析專案的彈性支援。',
+  e4h:'法規環境顧問支援',
+  e4p:'支援合規作業、QC框架精進、審計就緒工作及文件密集型整改工作。',
+  def_ey:'國防與使命', def_title:'為高責任、使命導向環境而建立。',
+  def_copy:'BRMA由美國空軍退伍軍人領導，具備在精準度、責任感與徹底執行至關重要的文件密集型、品質敏感環境中的工作經驗。這些標準貫穿於每一個業務參與中。',
+  contact_ey:'聯絡我們', contact_title:'需要合規、風險管理或分析支援的VOSB合作夥伴？',
+  contact_btn1:'申請能力說明書', contact_btn2:'聯絡BRMA',
+  form_name:'姓名', form_org:'組織名稱', form_email:'電子郵件',
+  form_inquiry:'詢問類型', form_msg:'訊息', form_submit:'發送訊息',
+  form_success:'感謝您 — 我們將儘快與您聯繫。',
+  inquiry_default:'請選擇…', inquiry_1:'一般詢問', inquiry_2:'組隊 / 分包',
+  inquiry_3:'能力說明書申請', inquiry_4:'VA機會', inquiry_5:'緊急 / 專案支援', inquiry_6:'其他',
+  info_title:'公司資訊', info_email_label:'電子郵件',
+  info_loc_label:'位置', info_cert_label:'VetCert-Certified VOSB', info_cert_val:'有效',
+  footer_meta:'VetCert認證VOSB | CAGE 0Q550 | 亞利桑那州坦佩',
+},
+ru:{
+  dir:'ltr', code:'RU', label:'RU',
+  nav_cap:'Компетенции', nav_results:'Результаты', nav_why:'Почему BRMA',
+  nav_engage:'Сотрудничество', nav_contact:'Контакты', nav_cta:'Запросить заявление',
+  pill1:'VetCert-сертифицированный VOSB', pill2:'CAGE 0Q550', pill3:'UEI ZRFCFWUR97U9',
+  pill4:'SAM.gov активен', pill5:'NAICS 541611',
+  hero_h1:'Поддержка комплаенса, риск-менеджмента и аналитики для федеральных программ. Компания ветерана.',
+  hero_sub:'BRMA обеспечивает прайм-подрядчиков и федеральные команды поддержкой в области AML/CDD, аудит-готовым QC, расследованиями и аналитикой в регулируемых средах.',
+  hero_btn1:'Запросить заявление о компетенциях', hero_btn2:'Обсудить тиминг',
+  cred_cert_label:'Сертификат', cred_cert_val:'VetCert-сертифицированный VOSB',
+  cred_cage_label:'Код CAGE', cred_naics_label:'Основной NAICS',
+  cred_sam_label:'Статус SAM', cred_sam_val:'Активен',
+  stats_ey:'Результаты', stats_title:'Задокументированный операционный опыт.',
+  stat1_l:'Процент прохождения QC за 6 лет в масштабной регулируемой комплаенс-работе',
+  stat2_l:'AML-расследований в высокообъёмной платёжной среде',
+  stat3_n:'6 лет', stat3_l:'Опыт QC в KYC, CDD, CIP, идентификации бенефициарных владельцев и подготовке к аудиту',
+  stat4_n:'Многоязычно', stat4_l:'Многоязычная компетенция доступна — английский, японский, мандарин, русский и корейский',
+  stat5_l:'боевых командировок (OIF/OEF) — опыт в высокоответственных миссионных средах',
+  stat6_n:'Прямая', stat6_l:'Доставка от принципала — тот, кто представляет работу, её и выполняет',
+  cap_ey:'Ключевые компетенции', cap_title:'Специализация на регулируемой среде.',
+  cap_sub:'Контроль-ориентированная, аудит-чувствительная работа в области AML/CDD, QC и аналитики.',
+  c1h:'KYC / KYB / CDD',
+  c1p:'Due diligence на основе риска, проверка бенефициарных владельцев, поддержка расширенной проверки и контроль качества файлов онбординга.',
+  c2h:'AML-расследования',
+  c2p:'Поддержка проверки транзакций, анализ паттернов, разработка нарративов и документально насыщенная следственная работа.',
+  c3h:'Комплаенс-QC и готовность к аудиту',
+  c3p:'QC-поддержка онбординга, периодических проверок и рабочих процессов EDD с документальной дисциплиной для аудита.',
+  c4h:'Аналитическая поддержка',
+  c4p:'Анализ на базе Excel/VBA, исследовательские методы, структурированная проверка и количественная работа.',
+  why_ey:'Отличительные черты', why_title:'Почему BRMA.',
+  w1h:'Свободное владение регулируемой средой', w1p:'Построено вокруг комплаенса, QC, документального контроля и аналитики, где важна точность.',
+  w2h:'Прямая доставка от принципала', w2p:'Нет передачи между продажами и исполнением. Нет расхождений.',
+  w3h:'Задокументированные результаты', w3p:'Производительность выражена в результатах, а не в общих фразах.',
+  w4h:'Многоязычная поддержка', w4p:'Полезно для трансграничной проверки документов, АТР-координации и многоязычных исследований.',
+  w5h:'VetCert-сертифицированный VOSB', w5p:'Применим как партнёр в контексте VA и как надёжный партнёр по тимингу.',
+  w6h:'Аналитическая строгость', w6p:'Не просто знакомство с процессами. BRMA поддерживает документально и аналитически насыщенную работу одновременно.',
+  w7h:'Дисциплина миссионной среды', w7p:'Построено для сред с высокой ответственностью, где важны качество документации, своевременность и надёжность.',
+  eng_ey:'Модели взаимодействия', eng_title:'Как BRMA вписывается в вашу стратегию закупок.',
+  e1h:'Субподряд и тиминг',
+  e1p:'BRMA поддерживает прайм-подрядчиков, нуждающихся в надёжном участии VOSB плюс реальных компетенциях. Заявление о компетенциях по запросу.',
+  e2h:'Возможности VA и федеральный тиминг',
+  e2p:'VetCert-сертифицированный VOSB, позиционированный для возможностей VA и субподрядных/тиминговых соглашений с федеральными партнёрами.',
+  e3h:'Проектная и срочная поддержка',
+  e3p:'Гибкая поддержка срочных комплаенс-работ, резервного QC, расследований и аналитических проектов.',
+  e4h:'Консалтинговая поддержка для регулируемой среды',
+  e4p:'Поддержка комплаенс-операций, совершенствования QC-фреймворков, аудит-подготовки и документально насыщенных корректировочных усилий.',
+  def_ey:'Оборона и миссия', def_title:'Для высокоответственных, миссионноориентированных сред.',
+  def_copy:'BRMA возглавляется ветераном ВВС США с опытом в документально насыщенных, качество-чувствительных средах, где важны точность, ответственность и доведение дела до конца. Те же стандарты применяются в каждом engagement.',
+  contact_ey:'Контакты', contact_title:'Нужен VOSB-партнёр для комплаенса, риск-менеджмента или аналитики?',
+  contact_btn1:'Запросить заявление о компетенциях', contact_btn2:'Связаться с BRMA',
+  form_name:'Имя', form_org:'Организация', form_email:'Email',
+  form_inquiry:'Тип запроса', form_msg:'Сообщение', form_submit:'Отправить',
+  form_success:'Спасибо — мы свяжемся с вами.',
+  inquiry_default:'Выбрать…', inquiry_1:'Общий запрос', inquiry_2:'Тиминг / Субподряд',
+  inquiry_3:'Запрос заявления о компетенциях', inquiry_4:'Возможность VA', inquiry_5:'Срочная / Проектная поддержка', inquiry_6:'Другое',
+  info_title:'Реквизиты', info_email_label:'Email',
+  info_loc_label:'Местоположение', info_cert_label:'VetCert-Certified VOSB', info_cert_val:'Активен',
+  footer_meta:'VetCert-сертифицированный VOSB | CAGE 0Q550 | Темпе, Аризона',
+},
+he:{
+  dir:'rtl', code:'HE', label:'HE',
+  nav_cap:'כישורים', nav_results:'תוצאות', nav_why:'למה BRMA',
+  nav_engage:'שיתוף פעולה', nav_contact:'צור קשר', nav_cta:'בקש הצהרת יכולות',
+  pill1:'VOSB מוסמך VetCert', pill2:'CAGE 0Q550', pill3:'UEI ZRFCFWUR97U9',
+  pill4:'SAM.gov פעיל', pill5:'NAICS 541611',
+  hero_h1:'תמיכה בציות, ניהול סיכונים וניתוח בבעלות ותיק לתוכניות פדרליות.',
+  hero_sub:'BRMA תומכת בקבלנים ראשיים ובצוותים פדרליים בפעילות AML/CDD, QC מוכן לביקורת, חקירות ותמיכה אנליטית בסביבות מוסדרות.',
+  hero_btn1:'בקש הצהרת יכולות', hero_btn2:'דון בתמיכת שיתוף פעולה',
+  cred_cert_label:'הסמכה', cred_cert_val:'VOSB מוסמך VetCert',
+  cred_cage_label:'קוד CAGE', cred_naics_label:'NAICS ראשי',
+  cred_sam_label:'סטטוס SAM', cred_sam_val:'פעיל',
+  stats_ey:'ביצועים', stats_title:'רשומת ביצוע מכומתת.',
+  stat1_l:'שיעור מעבר QC שנשמר לאורך 6 שנים בעבודת ציות מוסדרת בקנה מידה גדול',
+  stat2_l:'חקירות AML שהושלמו בסביבת תשלומים בנפח גבוה',
+  stat3_n:'6 שנים', stat3_l:'ניסיון QC בתחום ציות: KYC, CDD, CIP, זיהוי בעלות נהנה והכנה לביקורת',
+  stat4_n:'רב-לשוני', stat4_l:'יכולת רב-לשונית זמינה — אנגלית, יפנית, מנדרינית, רוסית וקורייאנית',
+  stat5_l:'פריסות קרב (OIF/OEF) — ניסיון שנבנה בסביבות משימה בעלות אחריות גבוהה',
+  stat6_n:'ישיר', stat6_l:'מסירה מהמנהל — האדם המציג את העבודה הוא האדם המבצע אותה',
+  cap_ey:'כישורי ליבה', cap_title:'מתמחים בעבודה בסביבה מוסדרת.',
+  cap_sub:'מסירה מכוונת-בקרה, רגישה-לביקורת בתחומי AML/CDD, בקרת איכות ותמיכה אנליטית.',
+  c1h:'KYC / KYB / CDD',
+  c1p:'בדיקת נאותות לקוחות מבוססת-סיכון, סקירת בעלות נהנה, תמיכת EDD וסקירת איכות קבצי קליטה לתוכניות מוסדרות.',
+  c2h:'חקירות AML',
+  c2p:'תמיכת סקירת עסקאות, ניתוח דפוסים, פיתוח נרטיב ועבודת חקירה עתירת תיעוד בסביבות AML.',
+  c3h:'QC ציות והכנה לביקורת',
+  c3p:'תמיכת QC לקליטה, סקירה תקופתית וזרימות EDD, עם משמעת תיעוד המותאמת לסביבות ביקורת ותיקון.',
+  c4h:'תמיכה אנליטית',
+  c4p:'ניתוח מבוסס Excel/VBA, שיטות אנליטיות ברמת מחקר, תמיכת סקירה מובנית ועבודה כמותית מונעת-תיעוד.',
+  why_ey:'גורמים מבדילים', why_title:'למה BRMA.',
+  w1h:'שליטה בסביבה מוסדרת', w1p:'נבנה סביב ציות, בקרת איכות, סקירת תיעוד ועבודה אנליטית שבה הדיוק חשוב.',
+  w2h:'מסירה ישירה מהמנהל', w2p:'אין העברה בין מכירות לביצוע. אין אי-התאמה בנרטיב.',
+  w3h:'הוכחה מכומתת', w3p:'הביצועים מוצגים עם תוצאות, לא שפת ייעוץ גנרית.',
+  w4h:'תמיכה רב-לשונית', w4p:'שימושי לסקירת מסמכים חוצת גבולות, תיאום אסיה-פסיפיק ומחקר רב-לשוני.',
+  w5h:'VOSB מוסמך VetCert', w5p:'ניתן לשימוש כשותף עסק קטן בבעלות ותיק בהקשר VA וכשותף צוות אמין יותר בהיקף רחב.',
+  w6h:'קפדנות אנליטית', w6p:'לא רק היכרות עם תהליכים. BRMA יכולה לתמוך בעבודה עתירת תיעוד ועתירת ניתוח בו-זמנית.',
+  w7h:'משמעת סביבת משימה', w7p:'נבנה לסביבות אחריות גבוהה שבהן איכות התיעוד, עמידה בזמנים ואמינות חשובים.',
+  eng_ey:'דרכי שיתוף פעולה', eng_title:'כיצד BRMA מתאימה לאסטרטגיית הרכש שלך.',
+  e1h:'תמיכת קבלנות משנה וצוות',
+  e1p:'BRMA תומכת בקבלנים ראשיים הזקוקים להשתתפות VOSB אמינה בתוספת יכולת ציות, QC ואנליטיקה אמיתית. הצהרת יכולות זמינה על פי בקשה.',
+  e2h:'הזדמנויות VA וצוות פדרלי',
+  e2p:'VOSB מוסמך VetCert, ממוקם להזדמנויות הרלוונטיות ל-VA ולהסדרי קבלנות משנה וצוות עם שותפים פדרליים.',
+  e3h:'תמיכה מבוססת-פרויקט וחירום',
+  e3p:'תמיכה גמישה לעבודת ציות דחופה, גיבוי QC, קיבולת חקירות AML ופרויקטים אנליטיים.',
+  e4h:'תמיכת ייעוץ בסביבה מוסדרת',
+  e4p:'תמיכה בפעילות ציות, שיפור מסגרת QC, עבודת הכנה לביקורת ומאמצי תיקון עתירי תיעוד.',
+  def_ey:'הגנה ומשימה', def_title:'נבנה לסביבות בעלות אחריות גבוהה ומוכוונות-משימה.',
+  def_copy:'BRMA מובלת על ידי ותיק חיל האוויר האמריקאי עם ניסיון בסביבות עתירות תיעוד ורגישות לאיכות שבהן דיוק, אחריות ומעקב עד הסוף חשובים. אותם סטנדרטים עוברים לכל מעורבות.',
+  contact_ey:'צור קשר', contact_title:'זקוק לשותף VOSB לציות, ניהול סיכונים או תמיכה אנליטית?',
+  contact_btn1:'בקש הצהרת יכולות', contact_btn2:'צור קשר עם BRMA',
+  form_name:'שם', form_org:'ארגון', form_email:'דואר אלקטרוני',
+  form_inquiry:'סוג פנייה', form_msg:'הודעה', form_submit:'שלח הודעה',
+  form_success:'תודה — נחזור אליך בקרוב.',
+  inquiry_default:'בחר…', inquiry_1:'פנייה כללית', inquiry_2:'צוות / קבלנות משנה',
+  inquiry_3:'בקשת הצהרת יכולות', inquiry_4:'הזדמנות VA', inquiry_5:'תמיכת חירום / פרויקט', inquiry_6:'אחר',
+  info_title:'מידע עסקי', info_email_label:'דואר אלקטרוני',
+  info_loc_label:'מיקום', info_cert_label:'VetCert-Certified VOSB', info_cert_val:'פעיל',
+  footer_meta:'VOSB מוסמך VetCert | CAGE 0Q550 | טמפי, אריזונה',
+},
+};
+
+/* ── Language switching ──────────────────────────────── */
+let currentLang = 'en';
+
+function buildLangSwitchers() {
+  const langs = ['en','ja','ko','zh','ru','he'];
+  ['lang-wrap-nav','lang-wrap-mobile'].forEach(id => {
+    const wrap = document.getElementById(id);
+    if (!wrap) return;
+    wrap.innerHTML = '';
+    langs.forEach(l => {
+      const btn = document.createElement('button');
+      btn.className = 'lang-opt' + (l === currentLang ? ' active' : '');
+      btn.textContent = T[l].label;
+      btn.onclick = () => setLang(l);
+      wrap.appendChild(btn);
+    });
+  });
+}
+
+function setLang(l) {
+  if (!T[l]) return;
+  currentLang = l;
+  const t = T[l];
+
+  // Direction
+  document.documentElement.lang = l;
+  document.documentElement.dir = t.dir || 'ltr';
+
+  // Update all data-i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = t[key];
+      } else {
+        el.textContent = t[key];
+      }
+    }
+  });
+
+  // Update stat numbers that have translations (non-count ones)
+  document.querySelectorAll('.stat-number[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) el.textContent = t[key];
+  });
+
+  // Update stat labels
+  document.querySelectorAll('.stat-label[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) el.textContent = t[key];
+  });
+
+  buildLangSwitchers();
+}
+
+// Init
+buildLangSwitchers();
+setLang('en');
+</script>
+</body>
+</html>
