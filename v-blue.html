@@ -800,21 +800,8 @@ footer {
   .method-grid { grid-template-columns:1fr; }
   .engage-grid { grid-template-columns:1fr; }
   .hero h1 { font-size:2rem; }
-  /* Globe: hide heavy Three.js canvas, show static fallback */
-  #globeCanvas { display:none; }
-  .globe-wrap::after {
-    content:'';
-    display:block;
-    width:260px; height:260px;
-    margin:0 auto;
-    border-radius:50%;
-    background: radial-gradient(circle at 35% 35%,
-      #1a4fff 0%, #0033cc 40%, #001a80 75%, #000510 100%);
-    box-shadow:
-      0 0 60px rgba(0,82,255,.35),
-      0 0 120px rgba(0,82,255,.15),
-      inset 0 0 40px rgba(0,0,0,.5);
-  }
+  /* Globe: show canvas on mobile (same as desktop) */
+  #globeCanvas { display:block; }
 }
 @media(max-width:480px){
   .why-grid { grid-template-columns:1fr; }
@@ -1391,8 +1378,6 @@ document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
 
 /* ─── BLUE GLOBE (Coinbase aesthetic) ────────────────── */
 (function () {
-  // Skip entirely on mobile — don't waste WebGL/battery
-  if (window.innerWidth <= 768) return;
 
   const canvas = document.getElementById('globeCanvas');
   if (!canvas) return;
